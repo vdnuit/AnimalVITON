@@ -1,0 +1,12 @@
+names:
+- cloth
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: dog-cloth-segmentation
+  url: https://universe.roboflow.com/signlanguage-dj8an/dog-cloth-segmentation/dataset/2
+  version: 2
+  workspace: signlanguage-dj8an
+test: /content/drive/MyDrive/AnimalVITON/YOLO_Seg/datasets/Dog_Cloth_Segmentation/test/images
+train: /content/drive/MyDrive/AnimalVITON/YOLO_Seg/datasets/Dog_Cloth_Segmentation/train/images
+val: /content/drive/MyDrive/AnimalVITON/YOLO_Seg/datasets/Dog_Cloth_Segmentation/valid/images
