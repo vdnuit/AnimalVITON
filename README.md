@@ -1,5 +1,6 @@
 # AnimalVITON
 This repository is copy from the official implementation of OOTDiffusion
+![demo](images/demo.png)&nbsp;
 
 ## Installation
 1. Clone the repository
