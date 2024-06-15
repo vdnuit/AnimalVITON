@@ -5,3 +5,4 @@ __pycache__/
 .uuid
 *.pt
 YOLO_Seg/datasets/Dog_Cloth_Segmentation
+.DS_Store
