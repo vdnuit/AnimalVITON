@@ -1,5 +1,5 @@
 # AnimalVITON
-This repository is copy from the official implementation of OOTDiffusion
+This repository is copy from the official implementation of [OOTDiffusion](https://github.com/levihsu/OOTDiffusion)
 ![demo](images/demo.png)&nbsp;
 
 ## Installation
@@ -34,6 +34,6 @@ mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusi
 > `<cloth-image-path>`: Path to the image of the dog clothing for virtual try-on (e.g. `examples/garment/garment_1.jpg`)
 
 ```sh
-cd OOTDiffusion/OOTDiffusion/run
+cd AnimalVITON/OOTDiffusion/OOTDiffusion/run
 python run_ootd.py --model_path <model-image-path> --cloth_path <cloth-image-path> --scale 2.0 --sample 4
 ```
