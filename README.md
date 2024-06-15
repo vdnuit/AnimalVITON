@@ -29,8 +29,8 @@ git clone https://huggingface.co/skush1/AnimalVITON_model
 mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusion/checkpoints/ootd OOTDiffusion/checkpoints/openpose clip-vit-large-patch14 AnimalVITON/OOTDiffusion/OOTDiffusion/checkpoints/
 ```
 ## Inference
-> <model-image-path>: Path to the image of the dog that will virtually try on the clothes (e.g. examples/model/model_2.jpg)
-> <cloth-image-path>: Path to the image of the dog clothing for virtual try-on (e.g. examples/garment/garment_1.jpg)
+> `<model-image-path>`: Path to the image of the dog that will virtually try on the clothes (e.g. `examples/model/model_2.jpg`)  
+> `<cloth-image-path>`: Path to the image of the dog clothing for virtual try-on (e.g. `examples/garment/garment_1.jpg`)
 
 ```sh
 cd OOTDiffusion/OOTDiffusion/run
