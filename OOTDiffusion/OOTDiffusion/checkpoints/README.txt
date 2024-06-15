@@ -1,0 +1,1 @@
+Put checkpoints here, including ootd, humanparsing, openpose, clip-vit-large-patch14, and yolo-cloth
