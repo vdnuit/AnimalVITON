@@ -1,0 +1,7 @@
+*.ckpt
+__pycache__/
+.vscode/
+*.pyc
+.uuid
+*.pt
+YOLO_Seg/datasets/Dog_Cloth_Segmentation
