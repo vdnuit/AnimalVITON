@@ -44,7 +44,7 @@ cd AnimalVITON/OOTDiffusion/OOTDiffusion/run
 python run_ootd.py --model_path <model-image-path> --cloth_path <cloth-image-path> --scale 2.0 --sample 4
 ```
 The results can be found in the run/images_output directory. This may take up to 5 minutes.
-For more details, please refer to ![this file](OOTDiffusion/OOTDiffusion.ipynb).
+For more details, please refer to [here](OOTDiffusion/OOTDiffusion.ipynb).
 
 ## Train
 ### YOLO-Seg Training for Mask Generator
@@ -54,7 +54,7 @@ First, download the dataset from [this link](https://huggingface.co/datasets/sku
 ```sh
 yolo task=segment mode=train model=yolov8n-seg.pt data=datasets/Dog_Cloth_Segmentation/data.yaml epochs=100 imgsz=800 plots=True
 ```
-For more details, please refer to ![this file](YOLO_Seg/train.ipynb).
+For more details, please refer to [here](YOLO_Seg/train.ipynb).
 
 ### OOTDiffusion Training
 Please note that the training code references [this repo](https://github.com/lyc0929/OOTDiffusion-train).
@@ -67,4 +67,4 @@ First, download the dataset from [this link](https://huggingface.co/datasets/sku
 ```sh
 !accelerate launch ootd_train.py --load_height 512 --load_width 384 --root_dir <root-dir-path>  --dataset_dir <dataset-path> --dataset_list 'train_pairs.txt' --dataset_mode 'train' --batch_size 4 --train_batch_size 4 --num_train_epochs 100
 ```
-For more details, please refer to ![this file](OOTDiffusion/OOTD-train.ipynb).
+For more details, please refer to [here](OOTDiffusion/OOTD-train.ipynb).
