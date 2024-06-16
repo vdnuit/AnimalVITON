@@ -1,5 +1,5 @@
 # AnimalVITON
-This repository is copy from the official implementation of [OOTDiffusion](https://github.com/levihsu/OOTDiffusion)
+Please note that all codes references the official implementation of [OOTDiffusion](https://github.com/levihsu/OOTDiffusion)
 ![demo](images/demo.png)&nbsp;
 
 ## Installation
@@ -52,7 +52,10 @@ yolo task=segment mode=train model=yolov8n-seg.pt data=datasets/Dog_Cloth_Segmen
 For more details, please refer to ![this file](YOLO_Seg/train.ipynb).
 
 ### OOTDiffusion Training
-First, download the dataset from [this link](https://huggingface.co/datasets/skush1/AnimalVITON_dataset) and dog-garment-pair-dataset.zip을 압축해제하세요.
+Please note that the training code references [this repo](https://github.com/lyc0929/OOTDiffusion-train).
+
+First, download the dataset from [this link](https://huggingface.co/datasets/skush1/AnimalVITON_dataset) and unzip the file dog-garment-pair-dataset.zip.
+
 > `<root-dir-path>`: e.g. `/workspace/AnimalVITON/OOTDiffusion/OOTDiffusion`
 > `<dataset-path>`: e.g. `/workspace/AnimalVITON_dataset/dog-garment-pair-dataset`
 
