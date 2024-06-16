@@ -1,4 +1,4 @@
-# AnimalVITON
+# AnimalVITON: Virtual Try-On for Dogs Using Latent Diffusion Model
 Please note that all codes references the official implementation of [OOTDiffusion](https://github.com/levihsu/OOTDiffusion)
 ![demo](images/demo.png)&nbsp;
 
