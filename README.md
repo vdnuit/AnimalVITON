@@ -65,6 +65,6 @@ First, download the dataset from [this link](https://huggingface.co/datasets/sku
 > `<dataset-path>`: e.g. `/workspace/AnimalVITON_dataset/dog-garment-pair-dataset`
 
 ```sh
-!accelerate launch ootd_train.py --load_height 512 --load_width 384 --root_dir <root-dir-path>  --dataset_dir <dataset-path> --dataset_list 'train_pairs.txt' --dataset_mode 'train' --batch_size 4 --train_batch_size 4 --num_train_epochs 100
+accelerate launch ootd_train.py --load_height 512 --load_width 384 --root_dir <root-dir-path>  --dataset_dir <dataset-path> --dataset_list 'train_pairs.txt' --dataset_mode 'train' --batch_size 4 --train_batch_size 4 --num_train_epochs 100
 ```
 For more details, please refer to [here](OOTDiffusion/OOTD-train.ipynb).
