@@ -29,6 +29,7 @@ git clone https://huggingface.co/openai/clip-vit-large-patch14
 git clone https://huggingface.co/skush1/AnimalVITON_model
 mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusion/checkpoints/ootd OOTDiffusion/checkpoints/openpose clip-vit-large-patch14 AnimalVITON/OOTDiffusion/OOTDiffusion/checkpoints/
 ```
+
 ## Inference
 > `<model-image-path>`: Path to the image of the dog that will virtually try on the clothes (e.g. `examples/model/model_2.jpg`)  
 > `<cloth-image-path>`: Path to the image of the dog clothing for virtual try-on (e.g. `examples/garment/garment_1.jpg`)
@@ -37,3 +38,25 @@ mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusi
 cd AnimalVITON/OOTDiffusion/OOTDiffusion/run
 python run_ootd.py --model_path <model-image-path> --cloth_path <cloth-image-path> --scale 2.0 --sample 4
 ```
+The results can be found in the run/images_output directory.
+For more details, please refer to ![this file](OOTDiffusion/OOTDiffusion.ipynb).
+
+## Train
+### YOLO-Seg Training for Mask Generator
+
+First, download the dataset from [this link](https://huggingface.co/datasets/skush1/AnimalVITON_dataset) and place the Dog_Cloth_Segmentation folder inside the `YOLO_Seg/datasets` folder.
+
+```sh
+yolo task=segment mode=train model=yolov8n-seg.pt data=datasets/Dog_Cloth_Segmentation/data.yaml epochs=100 imgsz=800 plots=True
+```
+For more details, please refer to ![this file](YOLO_Seg/train.ipynb).
+
+### OOTDiffusion Training
+First, download the dataset from [this link](https://huggingface.co/datasets/skush1/AnimalVITON_dataset) and dog-garment-pair-dataset.zip을 압축해제하세요.
+> `<root-dir-path>`: e.g. `/workspace/AnimalVITON/OOTDiffusion/OOTDiffusion`
+> `<dataset-path>`: e.g. `/workspace/AnimalVITON_dataset/dog-garment-pair-dataset`
+
+```sh
+!accelerate launch ootd_train.py --load_height 512 --load_width 384 --root_dir <root-dir-path>  --dataset_dir <dataset-path> --dataset_list 'train_pairs.txt' --dataset_mode 'train' --batch_size 4 --train_batch_size 4 --num_train_epochs 100
+```
+For more details, please refer to ![this file](OOTDiffusion/OOTD-train.ipynb).
