@@ -28,6 +28,11 @@ git clone https://huggingface.co/levihsu/OOTDiffusion
 git clone https://huggingface.co/openai/clip-vit-large-patch14
 git clone https://huggingface.co/skush1/AnimalVITON_model
 mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusion/checkpoints/ootd OOTDiffusion/checkpoints/openpose clip-vit-large-patch14 AnimalVITON/OOTDiffusion/OOTDiffusion/checkpoints/
+
+#Use custom checkpoints (Optional)
+mv AnimalVITON_model/ootd-train/unet_garm-epoch99.safetensors AnimalVITON/OOTDiffusion/OOTDiffusion/checkpoints/ootd/ootd_hd/checkpoint-36000/unet_garm/diffusion_pytorch_model.safetensors
+mv AnimalVITON_model/ootd-train/unet_vton-epoch99.safetensors AnimalVITON/OOTDiffusion/OOTDiffusion/checkpoints/ootd/ootd_hd/checkpoint-36000/unet_vton/diffusion_pytorch_model.safetensors
+
 ```
 
 ## Inference
@@ -38,7 +43,7 @@ mv AnimalVITON_model/yolo-cloth OOTDiffusion/checkpoints/humanparsing OOTDiffusi
 cd AnimalVITON/OOTDiffusion/OOTDiffusion/run
 python run_ootd.py --model_path <model-image-path> --cloth_path <cloth-image-path> --scale 2.0 --sample 4
 ```
-The results can be found in the run/images_output directory.
+The results can be found in the run/images_output directory. This may take up to 5 minutes.
 For more details, please refer to ![this file](OOTDiffusion/OOTDiffusion.ipynb).
 
 ## Train
